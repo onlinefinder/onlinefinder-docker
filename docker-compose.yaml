@@ -34,10 +34,10 @@ services:
       - DAC_OVERRIDE
 
   searxng:
-    container_name: searxng
-    image: searxng/searxng:latest
+    container_name: onlinefinder
+    image: onlinefinder/onlinefinder:latest
     networks:
-      - searxng
+      - onlinefinder
     ports:
      - "127.0.0.1:8080:8080"
     volumes:
@@ -56,7 +56,7 @@ services:
         max-size: "1m"
         max-file: "1"
 networks:
-  searxng:
+  onlinefinder:
     ipam:
       driver: default
 
