@@ -23,7 +23,7 @@ services:
     image: "redis:alpine"
     command: redis-server --save "" --appendonly "no"
     networks:
-      - searxng
+      - onlinefinder
     tmpfs:
       - /var/lib/redis
     cap_drop:
